@@ -2,17 +2,10 @@
 #
 # SPDX-License-Identifier: MIT
 
-# Hardening that holds whatever Sécurix revision is pinned.
+# Hardening not yet provided by the pinned Sécurix revision
+# (cloud-gouv/securix#294, cloud-gouv/securix#299).
 { lib, ... }:
 {
-  # Remote access is for the super administrators' SSH keys only
-  # (./superadmins.nix): no password nor keyboard-interactive login, which
-  # older Sécurix revisions leave enabled.
-  services.openssh.settings = {
-    PasswordAuthentication = false;
-    KbdInteractiveAuthentication = false;
-  };
-
   # Boot entries cannot be edited from the boot menu, and a bounded number of
   # generations stays installed (rollback remains possible).
   boot.lanzaboote = {
