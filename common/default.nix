@@ -37,6 +37,9 @@
 
     # Laptop: power optimizations, etc.
     ./laptop.nix
+
+    # SSH and boot loader hardening.
+    ./hardening.nix
   ];
 
   securix.self.machine = {
