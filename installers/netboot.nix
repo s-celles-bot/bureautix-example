@@ -3,7 +3,15 @@
 # SPDX-License-Identifier: MIT
 
 # There's a netboot installer, see `netboot/README.md` for documentation.
-{ lib, pkgs, sources, securix, defaultSystem, netbootIP, ... }:
+{
+  lib,
+  pkgs,
+  sources,
+  securix,
+  defaultSystem,
+  netbootIP,
+  ...
+}:
 
 securix.lib.buildNetbootInstaller {
   # This is the system model that is used for the partitioning.

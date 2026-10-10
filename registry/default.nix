@@ -2,7 +2,12 @@
 #
 # SPDX-License-Identifier: MIT
 
-{ lib, pkgs, securix, ... }:
+{
+  lib,
+  pkgs,
+  securix,
+  ...
+}:
 let
   inherit (lib) mapAttrs attrNames;
   inherit (builtins) concatStringsSep;

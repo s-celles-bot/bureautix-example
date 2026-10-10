@@ -3,7 +3,12 @@
 # SPDX-License-Identifier: MIT
 
 # CI workflows
-{ pkgs, sources, lib, ... }:
+{
+  pkgs,
+  sources,
+  lib,
+  ...
+}:
 let
   inherit (lib)
     mapAttrs'

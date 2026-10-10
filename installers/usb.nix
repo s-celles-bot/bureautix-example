@@ -3,7 +3,12 @@
 # SPDX-License-Identifier: MIT
 
 # There's an USB generic installer that will install a default system.
-{ pkgs, securix, defaultSystem, ... }:
+{
+  pkgs,
+  securix,
+  defaultSystem,
+  ...
+}:
 
 securix.lib.buildUSBInstallerISO {
   # We can include the whole default system in the USB stick to accelerate installation.

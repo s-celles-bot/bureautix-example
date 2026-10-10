@@ -4,8 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 # Generic installer for any laptops.
-args:
-{
+args: {
   net-installer = import ./netboot.nix args;
   usb-installer = import ./usb.nix args;
 }
